@@ -93,3 +93,24 @@ npm i
 ```
 
 查看 pre-commit 文件
+
+#### 5.规范 git 提交信息
+
+> 针对 git commit -m ""后的信息
+
+commitizen
+
+```
+npm i commitizen -D
+```
+
+安装 cz-conventional-changelog 并初始化
+
+>
+
+```
+npx commitizen init cz-conventional-changelog --save-dev --save-exact
+
+```
+
+使用
