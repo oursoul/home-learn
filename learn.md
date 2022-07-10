@@ -113,4 +113,25 @@ npx commitizen init cz-conventional-changelog --save-dev --save-exact
 
 ```
 
-使用
+使用 npx cz 提交代码；
+
+###### 使用 commitlint 对提交信息进行校验
+
+```
+npm i @commitlint/config-conventional @commitlint/cli -D
+
+```
+
+新建 commitlint.config.js 文件
+
+```
+module.exports = {
+  extends: ['@commitlint/config-conventional']
+}
+```
+
+使用 husky 生成 commit-msg 文件，验证提交信息：
+
+```shell
+npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
+```
